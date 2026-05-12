@@ -7,7 +7,9 @@ body {
   font-family: "Special Gothic Expanded One", sans-serif;
   font-size: 16px;
   font-weight: 200;
+  background: black;
 }
+
 
 header {
     display: flex;
@@ -125,3 +127,43 @@ nav {
     transform: translateX(-80%);
   }
 }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+figcaption {
+   color: white;
+   -webkit-text-stroke: 0.5px white;
+}
+
+/*mobile/cellphone widths*/
+ @media only screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #logo-portrait {
+        width: 50%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    #namesake > h2 {
+        font-size: 0.87em;
+        padding-right: 0px;
+        top: 255px;
+        right: 10px;
+    }
+    #name {
+        font-size: 2em;
+        top: 185px;
+        padding: 0px;
+        
+    }
+
+    #nav-items > li {
+        display: none;
+    }
+}
+/*create nav side bar for phone site instead of the nav items being fixed to the page
