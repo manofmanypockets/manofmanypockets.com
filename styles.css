@@ -153,8 +153,6 @@ figcaption {
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-rule: 2px solid white;
-    
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     gap: 20px;
@@ -208,6 +206,7 @@ figcaption {
 #services-container {
     display: flex;
     justify-content: space-around;
+    flex: wrap;
     width: 100%;
     height: 30em;
 }
@@ -220,6 +219,8 @@ figcaption {
     align-items: center;
     position: relative;
     transition: .2s;
+    color: black;
+    -webkit-text-stroke: 0.1px white;
     width: 20%;
     height: 30em;
     background: url("./Images/aged-coffee-color-paper-texture-photo.jpg");
@@ -233,10 +234,43 @@ figcaption {
 }
 
 .service-item > img {
-    width: 15em;
+    width: 100%;
     height: 15em;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+#video-showcase > h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#video-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    height: 33em;
+}
+
+#most-recent-video {
+    position: relative;
+    grid-column: 1 / span 1;
+    height: 33em;
+    width: 85%;
+}
+
+#second-recent-video {
+    position: relative;
+    grid-column: 2 / span 1;
+    height: 33em;
+    width: 85%;
+}
+
+#video-container > iframe {
+    position: relative;
+    aspect-ratio: 16 / 9;
 }
 
 /*mobile/cellphone widths*/
