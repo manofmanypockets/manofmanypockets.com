@@ -5,6 +5,8 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none; 
+    overflow-x: hidden;
 }
 
 body {
@@ -92,7 +94,7 @@ nav {
     width: auto;
     height: 33em;
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
@@ -165,9 +167,10 @@ figcaption {
     border-right: 3px solid white;
 }
 
-#about-container > h1 {
+#about-container > h2 {
     display: grid;
     justify-content: center;
+    font-size: 2em;
 }
 
 #about-container > p {
@@ -185,9 +188,10 @@ figcaption {
     
 }
 
-#skills-container > h1 {
+#skills-container > h2 {
     display: grid;
     justify-content: center;
+    font-size: 2em;
 }
 
 #skills-container > ul {
@@ -196,11 +200,12 @@ figcaption {
 }
 
 
-#services > h1 {
+#services > h2 {
     display: flex;
     justify-content: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-size: 2em;
 }
 
 #services-container {
@@ -219,11 +224,10 @@ figcaption {
     align-items: center;
     position: relative;
     transition: .2s;
-    color: black;
-    -webkit-text-stroke: 0.1px white;
+    color: white;
     width: 20%;
     height: 30em;
-    background: url("./Images/aged-coffee-color-paper-texture-photo.jpg");
+    background: url("./Images/depositphotos_618818362-stock-photo-dark-rough-cement-wall-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -240,11 +244,12 @@ figcaption {
     object-fit: cover;
 }
 
-#video-showcase > h1 {
+#video-showcase > h2 {
     display: flex;
     justify-content: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-size: 2em;
 }
 
 #video-container {
