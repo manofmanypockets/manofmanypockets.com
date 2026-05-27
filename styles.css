@@ -18,14 +18,16 @@ body {
   background: black;
 }
 
-header {
+#header-container {
     display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     align-content: start;
     background-color: black;
     width: 100%;
-    height: 310px;
+    height: 20em;
 }
 
 h1 {
@@ -89,13 +91,21 @@ nav {
     color: white;
 }
 
+#scrolling-pictures {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+}
+
 .carousel {
     margin: 0px auto;
     width: auto;
     height: 33em;
     display: flex;
+    flex: 0 1 auto;
     overflow-x: hidden;
     overflow-y: hidden;
+    position: relative;
 }
 
 .carousel::-webkit-scrollbar {
@@ -105,31 +115,36 @@ nav {
 .group {
     margin-top: 0px;
     display: flex;
-    align-items: center;
     height: 100%;
     min-width: 100%;
-    justify-content: flex-start;
     gap: 0em;
     animation: spin 45s infinite linear;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .card {
-    flex: 1 0 5em;
+    flex: 0 1 10em;
     height: 12em;
-    transform: scale(1.55);
+    transform: scale(1.2);
     overflow: hidden;
     font-size: 3rem;
     text-align: center;
     padding: 0px;
     align-content: center;
     padding: 0em;
+    position: relative;
 }
 
 .card img {
+    display: flex;
     position: static;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    position: relative;
 }
 
 @keyframes spin {
@@ -278,33 +293,110 @@ figcaption {
     aspect-ratio: 16 / 9;
 }
 
+#footer-container {
+    width: 100%;
+    height: 23em;
+    padding-top: 6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#social-heading {
+    padding-top: 1em;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+}
+
+#social-container {
+    grid-column: 1 / span 1;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+}
+
+#social-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.fa-brands {
+    font-size: 5em;
+    align-items: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+#insta-icon {
+    --_space: ;
+    background-image: linear-gradient(
+      45deg var(--_space),
+      #b000e6 6%,
+      #f79e02 81%,
+      #f58f0a 100%
+    );
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-tiktok {
+    --_space: ;
+
+    background-image: linear-gradient(
+     135deg var(--_space),
+        #00e6da 36%,
+        #ff00d9 59%,
+     #ff00bf 0%
+    );
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contact-container {
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-top: 3px solid white;
+    font-size: 1.2em;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+#contact-heading {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#contact-container > p {
+    font-size: 0.5em;
+}
+
+
+/* figure out how the fuck to make the about section wrap down at this width*/
+ @media only screen and (max-width: 767px) {
+
+ }
+
 /*mobile/cellphone widths*/
  @media only screen and (max-width: 767px) {
-    header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    #logo-portrait {
-        width: 50%;
-        right: 50%;
-        transform: translateX(50%);
-    }
-    #namesake > h2 {
-        font-size: 0.87em;
-        padding-right: 0px;
-        top: 255px;
-        right: 10px;
-    }
-    #name {
-        font-size: 2em;
-        top: 185px;
-        padding: 0px;
-        
+    .carousel {
+        width: auto;
     }
 
-    #nav-items > li {
-        display: none;
+    #about {
+        grid-template-rows: 1fr 1fr;
     }
-}
+ }
 /*create nav side bar for phone site instead of the nav items being fixed to the page
