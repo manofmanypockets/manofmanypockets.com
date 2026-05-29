@@ -16,18 +16,23 @@ body {
   letter-spacing: 0.1em;
   color: white;
   background: black;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #header-container {
+    width: auto;
+    height: 20em;
+}
+
+#header-elements {
+    height: 20em;
+    width: 100%;
     display: flex;
-    flex: 0 1 auto;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: start;
-    background-color: black;
-    width: 100%;
-    height: 20em;
 }
 
 h1 {
@@ -38,14 +43,23 @@ header > div {
     padding: 10px 0px 10px 0px;
 }
 
+.header-flex {
+    display: flex;
+    flex: 1 0 0px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inner-image {
+    width: auto;
+}
+
 #logo-portrait {
     position: relative;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
     border-radius: 50%;
     box-shadow: 0px 0px 40px 1px rgba(206,206,206,0.47);
-    width: 300px;
+    width: 18em;
 }
 
 #namesake {
@@ -56,12 +70,14 @@ header > div {
     position: relative;
     color: white;
     border: 0px solid black;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px
 }
 
 #namesake > h2 {
     position: relative;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px
 }
 
 #name {
@@ -84,17 +100,10 @@ nav {
     list-style-type: none;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-right: 50px;
 }
 
 #nav-items > li > a {
     color: white;
-}
-
-#scrolling-pictures {
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: column;
 }
 
 .carousel {
@@ -126,7 +135,7 @@ nav {
 }
 
 .card {
-    flex: 0 1 10em;
+    flex: 0 1 auto;
     height: 12em;
     transform: scale(1.2);
     overflow: hidden;
@@ -134,7 +143,6 @@ nav {
     text-align: center;
     padding: 0px;
     align-content: center;
-    padding: 0em;
     position: relative;
 }
 
@@ -165,6 +173,7 @@ figcaption {
    color: white;
    -webkit-text-stroke: 0.5px white;
    padding-bottom: 2em;
+   padding-top: 1em;
 }
 
 #about {
@@ -265,6 +274,7 @@ figcaption {
     padding-top: 1em;
     padding-bottom: 1em;
     font-size: 2em;
+    flex-wrap: wrap;
 }
 
 #video-container {
@@ -294,7 +304,7 @@ figcaption {
 }
 
 #footer-container {
-    width: 100%;
+    width: autp;
     height: 23em;
     padding-top: 6em;
     display: grid;
@@ -329,7 +339,6 @@ figcaption {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-
 
 #insta-icon {
     --_space: ;
@@ -385,18 +394,147 @@ figcaption {
 
 
 /* figure out how the fuck to make the about section wrap down at this width*/
- @media only screen and (max-width: 767px) {
+ @media only screen and (max-width: 1400px) {
+    #about {
+       display: block;
+    }
 
+    #about-container {
+        border-right: none;
+    }
+
+    #skills-container > ul {
+        line-height: 3;
+    }
  }
+
+@media only screen and (max-width: 1020px) {
+    #namesake, #inner-image, #nav-container {
+        transform: scale(0.7);
+        position: relative;
+        min-width: 0;
+    }
+
+    #namesake {
+        padding: 0px;
+    }
+
+    .carousel {
+        height: 27em; 
+    }
+
+    #services-container {
+        display: block;
+        height: auto;
+    }
+
+    .service-item {
+        width: auto;
+        margin-bottom: 2em;
+    }
+
+    .service-item > img {
+        zoom: 150%;
+        object-fit: cover;
+    }
+
+    #video-container {
+        display: block;
+        height: auto;
+    }
+
+    .video {
+        display: flex;
+        margin-bottom: 2em;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    #social-container {
+        border-right: none;
+    }
+
+    #contact-container {
+        font-size: 1em;
+        height: 24em;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}
 
 /*mobile/cellphone widths*/
  @media only screen and (max-width: 767px) {
     .carousel {
-        width: auto;
+        height: 18em;
+    }
+    
+    figcaption {
+        font-size: 1em;
     }
 
     #about {
-        grid-template-rows: 1fr 1fr;
+        padding: 1em;
+    }
+
+    #about-container > h2 {
+        font-size: 1.5em;
+    }
+
+    #about-container > p {
+        font-size: 1em;
+    }
+
+    #skills-container > h2 {
+        font-size: 1.5em;
+    }
+
+    #skills-container > ul {
+        font-size: 1em;
+        line-height: 2.5;
     }
  }
-/*create nav side bar for phone site instead of the nav items being fixed to the page
+
+@media only screen and (max-width: 550px) {
+    #namesake, #inner-image, #nav-container {
+        transform: scale(0.4);
+    }
+
+    #header-elements {
+        height: 9em;
+    }
+
+    #header-container {
+        height: 10em;
+    }
+
+    .carousel {
+        height: 14em;
+    }
+
+    figcaption {
+        font-size: 0.75em;
+    }
+
+        #about {
+        padding: 1em;
+    }
+
+    #about-container > h2 {
+        font-size: 1em;
+    }
+
+    #about-container > p {
+        font-size: 0.75em;
+    }
+
+    #skills-container > h2 {
+        font-size: 1em;
+    }
+
+    #skills-container > ul {
+        font-size: 0.75em;
+        line-height: 2;
+    }
+}
