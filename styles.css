@@ -437,6 +437,10 @@ figcaption {
         zoom: 150%;
         object-fit: cover;
     }
+    
+    .service-item:hover {
+        display: none;
+    }
 
     #video-container {
         display: block;
