@@ -109,7 +109,7 @@ nav {
 .carousel {
     margin: 0px auto;
     width: auto;
-    height: 33em;
+    height: 25em;
     display: flex;
     flex: 0 1 auto;
     overflow-x: hidden;
