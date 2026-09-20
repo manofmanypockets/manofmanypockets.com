@@ -354,19 +354,8 @@ figcaption {
     -webkit-text-fill-color: transparent;
 }
 
-.fa-tiktok {
-    --_space: ;
-
-    background-image: linear-gradient(
-     135deg var(--_space),
-        #00e6da 36%,
-        #ff00d9 59%,
-     #ff00bf 0%
-    );
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.fa-twitch {
+    color: purple;
 }
 
 #contact-container {

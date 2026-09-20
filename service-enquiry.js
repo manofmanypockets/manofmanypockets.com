@@ -1,4 +1,4 @@
-const lessonEnquiry = document.getElementById("lesson-enquiry");
+/*const lessonEnquiry = document.getElementById("lesson-enquiry");
 const coverEnquiry = document.getElementById("cover-enquiry");
 const gigEnquiry = document.getElementById("gig-enquiry");
 const trackingEnquiry = document.getElementById("tracking-enquiry");
@@ -13,4 +13,4 @@ function sendEmail() {
 lessonEnquiry.addEventListener('click', sendEmail);
 coverEnquiry.addEventListener('click', sendEmail);
 gigEnquiry.addEventListener('click', sendEmail);
-trackingEnquiry.addEventListener('click', sendEmail);
+trackingEnquiry.addEventListener('click', sendEmail);*/
